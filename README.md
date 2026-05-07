@@ -8,9 +8,14 @@ Heliox is a cinematic, real-time space weather monitoring platform that translat
 
 ## 🌐 Live Demo
 
-(https://heliox-delta.vercel.app/)
-
-Add your deployment URL here once it is ready.
+<p align="center">
+  <a href="https://heliox-delta.vercel.app/" target="_blank" rel="noreferrer">
+    <img
+      src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
+      alt="Open Heliox on Vercel"
+    />
+  </a>
+</p>
 
 ---
 
