@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #000000;
+  --bg-surface: #0a0a0a;
+  --bg-card: rgba(255,255,255,0.02);
+  --text-primary: #ffffff;
+  --text-muted: rgba(255,255,255,0.7);
+  --text-faint: rgba(255,255,255,0.4);
+  --border-subtle: rgba(255,255,255,0.08);
+  --accent-green: #3ddc84;
+  --accent-yellow: #ffd166;
+  --accent-orange: #ff9f40;
+  --accent-red: #ff4d4d;
+  --accent-deepred: #cc0000;
+  --accent-blue: #4fc3f7;
+}
+
+.liquid-glass {
+  background: rgba(255,255,255,0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.45) 0%,
+    rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0)    40%,
+    rgba(255,255,255,0)    60%,
+    rgba(255,255,255,0.15) 80%,
+    rgba(255,255,255,0.45) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.liquid-glass-strong {
+  background: rgba(255,255,255,0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass-strong::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.5) 0%,
+    rgba(255,255,255,0.2) 20%,
+    rgba(255,255,255,0)   40%,
+    rgba(255,255,255,0)   60%,
+    rgba(255,255,255,0.2) 80%,
+    rgba(255,255,255,0.5) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+html[data-theme="light"] body {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+#root { min-height: 100dvh; }
+
+img, video, canvas, svg { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+button { cursor: pointer; font: inherit; border: none; background: none; }
+
+/* Shimmer keyframe for skeletons */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* Chart tooltip override */
+.recharts-tooltip-wrapper { outline: none; }
+.recharts-default-tooltip {
+  background: rgba(10,10,10,0.95) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+}
