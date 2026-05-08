@@ -62,7 +62,7 @@ All data is free, public, CORS-enabled, and requires no API key.
 | Icons | Lucide React |
 | Styling | CSS with project-specific utility styling |
 | Data | NOAA SWPC REST APIs (no key, CORS-enabled) |
-| Deployment | Vercel (recommended) |
+| Deployment | Vercel |
 
 ---
 
@@ -240,19 +240,6 @@ Heliox turns this science into plain-language risk levels for critical infrastru
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
-
-Please follow Conventional Commits for commit messages.
-
----
 
 ## 🙏 Credits & Acknowledgements
 
